@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 20px;
+    height: 100vh; /* Full height to center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between title and list */
+}
+
+.container {
+    text-align: center;
+    flex-grow: 1; /* Allow the container to grow */
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 7%; /* Center the title vertically */
+}
+
+.members-list {
+    list-style-type: none;
+    padding: 0;
+    position: absolute; /* Position the list */
+    bottom: 20px; /* Adjust distance from bottom */
+    left: 20px; /* Adjust distance from left */
+    color: #000000;
+    text-align: left;
+}
+
+.members-list li {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+#instance-list {
+    position: fixed; /* Fix to the bottom */
+    right: 20px; /* Position from the right */
+    bottom: 20px; /* Position from the bottom */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    border-radius: 8px;
+    padding: 10px;
+    max-height: 500px; /* Optional limit height */
+    overflow-y: auto; /* Scrollable if too many instances */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black; /* Set text color to black */
+}
+
+#instance-list li {
+    margin: 5px 0; /* Space between items */
+}

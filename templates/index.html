@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCC Final Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+    <script>
+        async function getIPAddresses() {
+            const externalIp = await fetch('/external-ip')
+                .then(response => response.text())
+                .catch(() => 'Unable to get external IP');
+
+            const internalIp = await fetch('/internal-ip')
+                .then(response => response.text())
+                .catch(() => 'Unable to get internal IP');
+
+            document.getElementById('external-ip').innerText = externalIp;
+            document.getElementById('internal-ip').innerText = internalIp;
+        }
+
+        async function getInstances() {
+            const instances = await fetch('/instances')
+                .then(response => response.text())
+                .catch(() => 'Unable to get instance data');
+
+            const instanceList = document.getElementById('instance-list');
+            instanceList.innerHTML = ""; // Clear previous data
+
+            const instanceLines = instances.split('\n').filter(line => line); // Filter out any empty lines
+
+            instanceLines.forEach(line => {
+                const li = document.createElement('li');
+                li.textContent = line;
+                instanceList.appendChild(li);
+            });
+        }
+
+        window.onload = () => {
+            getIPAddresses(); // Fetch IP addresses on load
+            getInstances(); // Fetch instances on load
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">VCC Final Project</h1>
+        <ul class="members-list">
+            <li>Anup Shaw (G23AI2015)</li>
+            <li>Mudit Kumar (G23AI2037)</li>
+            <li>Pariniti Mishra (G23AI2036)</li>
+            <li>Keyur Karve (G23AI2072)</li>
+            <li>Abhinandan K R (G23AI2043)</li>
+        </ul>
+        
+        <h2>External IP Address</h2>
+        <p id="external-ip">Loading...</p>
+
+        <h2>Internal IP Address</h2>
+        <p id="internal-ip">Loading...</p>
+
+        <ul id="instance-list">Loading instances...</ul>
+    </div>
+</body>
+</html>
