@@ -39,15 +39,12 @@ body {
 }
 
 #instance-list {
-    position: fixed; /* Fix to the bottom */
     right: 20px; /* Position from the right */
     bottom: 20px; /* Position from the bottom */
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
-    border-radius: 8px;
-    padding: 10px;
+    background-color: transparent;
     max-height: 500px; /* Optional limit height */
     overflow-y: auto; /* Scrollable if too many instances */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
     color: black; /* Set text color to black */
 }
 
