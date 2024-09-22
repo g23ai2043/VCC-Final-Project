@@ -111,7 +111,7 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
    - Transfer the json file downloaded to VCC-Final-Project in the VM created in step 2 and rename it as `vcc-main-project`.
 
 5. **Test if the code is working fine**
-   - cd into `VCC-Final-Project` in the instance created.
+   - `cd` into `VCC-Final-Project` in the instance created.
    - Build a docker image using the following command
      ```bash
      docker build -t vcc-web-app:latest .
@@ -124,4 +124,47 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
      <p align="center">
       <img src="images\docker_run.png">
      </p>
-   - Now get the external IP for the instance from the console. Open your web browser and navigate to `http://VM_EXTERNAL_IP:5000`. If the website is displayed, it means all the files are correct, and you can proceed further.
+   - Now get the external IP for the instance from the console. Open your web browser and navigate to `http://VM_EXTERNAL_IP:5000`. If the website is displayed, it means all the files are correct, and you can proceed 
+     further.
+
+6. **Push the docker image created to the container registry.**
+   - Tag the docker image.
+      ```bash
+       docker tag vcc-web-app gcr.io/YOUR_PROJECT_ID/vcc-web-app
+      ```
+   - Push the docker image to the container registry.
+     ```bash
+       docker build gcr.io/YOUR_PROJECT_ID/vcc-web-app
+     ```
+
+7. **Create an instance template for the instance group**
+   - Navigate to `Instance templates` under `Compute Engine` in the console.
+   - Choose the machine type, storage, etc.
+   - Under container click on deploy container and enter `gcr.io/YOUR_PROJECT_ID/vcc-web-app` as the docker image and create the template.
+   - You can also use the below shell script to achieve this.
+     ### Script
+
+    ```bash
+    #!/bin/bash
+    
+    # Set variables
+    PROJECT_ID="your-project-id"
+    ZONE="us-central1-a"  # Change to your desired zone
+    TEMPLATE_NAME="my-instance-template"
+    MACHINE_TYPE="e2-medium"  # Change as needed
+    IMAGE_FAMILY="debian-10"   # Change to your desired image family
+    IMAGE_PROJECT="debian-cloud" # Change to your desired image project
+    CONTAINER_IMAGE="gcr.io/your-project-id/your-container-image"  # Change to your container image
+    
+    # Create the instance template
+    gcloud compute instance-templates create "$TEMPLATE_NAME" \
+      --project="$PROJECT_ID" \
+      --machine-type="$MACHINE_TYPE" \
+      --image-family="$IMAGE_FAMILY" \
+      --image-project="$IMAGE_PROJECT" \
+      --tags=http-server,https-server \
+      --container-image="$CONTAINER_IMAGE" \
+      --zone="$ZONE"
+    
+    echo "Instance template '$TEMPLATE_NAME' created successfully with container deployment."
+    ```
