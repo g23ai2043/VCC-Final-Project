@@ -284,6 +284,7 @@ Replication steps are provided for Windows OS and Google Cloud Platform.
   <p align="center"> <img src="images/Instance_group_monitor_less_50.jpg" alt="Instance_group_monitor_less_50"> </p>
   <p align="center"> <img src="images/Website_less_50.jpg" alt="Website_less_50"> </p>
 - CPU Utilization greater than 50%.
+- <p align="center"> <img src="images/stress.jpg" alt="stress"> </p>
   <p align="center"> <img src="images/Instance_group_more_50.jpg" alt="Instance_group_more_50"> </p>
   <p align="center"> <img src="images/Instance_group_monitor_more_50.jpg" alt="Instance_group_monitor_more_50"> </p>
   <p align="center"> <img src="images/Website_more_50.jpg" alt="Website_more_50"> </p>
