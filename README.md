@@ -1,7 +1,7 @@
 # FlaskScale: Dynamic Web Application Management
 
 <p align="center">
-  <img src="images\playstore.jpg">
+  <img src="images\main.png">
 </p>
 
 ---
