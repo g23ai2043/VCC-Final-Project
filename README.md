@@ -70,3 +70,30 @@
 </p>
 
 ---
+
+### Replication of the Project
+
+Replication steps are given in accordance with Windows OS and Google Cloud Platform.
+
+**Steps to be followed:**
+
+1. **Create a project on Google Cloud console**
+   - Create a new project in Google cloud.
+   - Enable compute engine API, container API and load balancing API.
+
+2. **Set up a virtual machine for creating Docker images and other related tasks.**
+   - Create a new e2.medium instance. Change the configuration as required. Allow HTTP and HTTPS traffic.
+   - ssh into the instance using the console and authenticate.
+   - Update package lists:
+     ```bash
+     sudo apt-get update
+     ```
+   - Install Docker:
+     ```bash
+     sudo apt-get install -y docker.io
+     ```
+   - Add your user to the Docker group:
+     ```bash
+     sudo usermod -aG docker $USER
+     ```
+   - Log out and log back in to refresh group membership.
