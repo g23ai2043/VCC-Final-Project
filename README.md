@@ -279,12 +279,19 @@ Replication steps are provided for Windows OS and Google Cloud Platform.
 
 ### Demonstration
 
-- CPU Utilization less than 50%.
+- `CPU Utilization less than 50%` : The system is handling the load efficiently without triggering any scaling actions.
+  - Instance group with CPU utilization below 50%
   <p align="center"> <img src="images/Instance_group_less_50.jpg" alt="Instance_group_less_50"> </p>
+  - Instance group monitoring with CPU utilization below 50%
   <p align="center"> <img src="images/Instance_group_monitor_less_50.jpg" alt="Instance_group_monitor_less_50"> </p>
+  - Website with CPU utilization below 50%
   <p align="center"> <img src="images/Website_less_50.jpg" alt="Website_less_50"> </p>
-- CPU Utilization greater than 50%.
-- <p align="center"> <img src="images/stress.jpg" alt="stress"> </p>
+- `CPU Utilization greater than 50%` : Introducing CPU stress on one of the instances triggers the auto-scaling mechanism.
+  - Introducing stress.
+  <p align="center"> <img src="images/stress.jpg" alt="stress"> </p>
+  - Instance group after CPU utilization goes above 50%
   <p align="center"> <img src="images/Instance_group_more_50.jpg" alt="Instance_group_more_50"> </p>
+  - Instance group monitoring after CPU utilization goes above 50%
   <p align="center"> <img src="images/Instance_group_monitor_more_50.jpg" alt="Instance_group_monitor_more_50"> </p>
+  - Website after CPU utilization goes above 50%
   <p align="center"> <img src="images/Website_more_50.jpg" alt="Website_more_50"> </p>
