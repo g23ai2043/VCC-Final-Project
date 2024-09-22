@@ -174,7 +174,7 @@ Replication steps are provided for Windows OS and Google Cloud Platform.
      --zone="$ZONE"
 
    echo "Instance template '$TEMPLATE_NAME' created successfully with container deployment."
-<p align="center"> <img src="images/instance_template.png" alt="Instance Template"> </p>
+<p align="center"> <img src="images/instance_template.jpg" alt="Instance Template"> </p>
 
 8. **Create an Instance Group Using the Instance Template**
    - Navigate to **Instance Groups** under **Compute Engine** in the Google Cloud Console.
@@ -267,7 +267,7 @@ Replication steps are provided for Windows OS and Google Cloud Platform.
      --project="$PROJECT_ID"
 
    echo "Load balancer '$LOAD_BALANCER_NAME' created successfully."
-<p align="center"> <img src="images/load_balancer.png" alt="Load Balancer"> </p>
+<p align="center"> <img src="images/lb.jpg" alt="Load Balancer"> </p>
 
 10. **Create a Domain Name (Optional)**
     - If you wish to have a custom domain, you can register a domain name through [Google Domains](https://domains.google).
