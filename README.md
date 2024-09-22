@@ -40,3 +40,25 @@
   - Supports seamless scaling to accommodate varying user demands.
 
 ---
+
+## Technologies
+
+- **Flask**  
+  [Flask](https://flask.palletsprojects.com/) is a lightweight WSGI web application framework in Python that is easy to use and suitable for building both simple and complex applications.
+
+- **Docker**  
+  [Docker](https://docs.docker.com/) is a platform that enables developers to package applications and their dependencies into containers, ensuring consistency across development, testing, and production environments.
+
+- **Google Compute Engine**  
+  [Google Compute Engine](https://cloud.google.com/compute/docs) provides scalable and flexible virtual machine (VM) instances on Google Cloud, allowing users to run applications in a cloud environment.
+
+- **Instance Groups**  
+  [Instance Groups](https://cloud.google.com/compute/docs/instance-groups) in Google Cloud allow you to manage collections of virtual machine instances, enabling auto-scaling and load balancing to handle varying workloads efficiently.
+
+- **Load Balancing**  
+  [Load Balancing](https://cloud.google.com/load-balancing/docs) is a cloud service that distributes incoming traffic across multiple backend instances, enhancing application availability and reliability.
+
+- **Google Domains**  
+  [Google Domains](https://domains.google/) is a domain registration service by Google that allows users to purchase and manage domain names for their web applications, providing an easy way to connect to Google Cloud services.
+
+---
