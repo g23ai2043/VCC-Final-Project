@@ -97,3 +97,31 @@ Replication steps are given in accordance with Windows OS and Google Cloud Platf
      sudo usermod -aG docker $USER
      ```
    - Log out and log back in to refresh group membership.
+
+3. **Git clone this repository.**
+   - Clone this repository to the VM using command:
+     ```bash
+     git clone https://github.com/abhi-kr12/de-zoomcamp-playstore.git
+     ```
+   - `cd` into `VCC_Final-Project`.
+   - Check if all the directories are present which are `static`, `templates`, and the files `.gitignore`,`app.py`,`dockerfile` and `requirements.txt`.
+
+4. **Download the service account key and paste it in the VCC-Final-Project folder**
+   - Navigate to service accounts under IAM in GCP and create a new key for the service account used for this project.
+   - Transfer the json file downloaded to VCC-Final-Project in the VM created in step 2 and rename it as `vcc-main-project`.
+
+5. **Test if the code is working fine**
+   - cd into `VCC-Final-Project` in the instance created.
+   - Build a docker image using the following command
+     ```bash
+     docker build -t vcc-web-app:latest .
+     ```
+   - Run the docker image using the following command
+     ```bash
+     docker run -p 5000:5000 vcc-web-app
+     ```
+   - The docker container will start running and you should see something like this:
+     <p align="center">
+      <img src="images\docker_run.png">
+     </p>
+   - Now get the external IP for the instance from the console. Open your web browser and navigate to `http://VM_EXTERNAL_IP:5000`. If the website is displayed, it means all the files are correct, and you can proceed further.
