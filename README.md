@@ -62,3 +62,11 @@
   [Google Domains](https://domains.google/) is a domain registration service by Google that allows users to purchase and manage domain names for their web applications, providing an easy way to connect to Google Cloud services.
 
 ---
+
+## Data Architecture
+
+<p align="center">
+  <img src="images\architecture.png">
+</p>
+
+---
