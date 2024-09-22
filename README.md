@@ -77,7 +77,7 @@
 
 ### Replication of the Project
 
-Replication steps are provided for Windows OS and Google Cloud Platform.
+Replication steps are provided for Debian OS and Google Cloud Platform.
 
 **Steps to Follow:**
 
