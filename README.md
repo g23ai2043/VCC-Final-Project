@@ -140,7 +140,7 @@ Replication steps are provided for Windows OS and Google Cloud Platform.
      docker push gcr.io/YOUR_PROJECT_ID/vcc-web-app
      ```
    <p align="center">
-     <img src="images/docker_container.png" alt="Docker Container">
+     <img src="images/docker_container.jpg" alt="Docker Container">
    </p>
 
 7. **Create an Instance Template for the Instance Group**
@@ -208,7 +208,7 @@ Replication steps are provided for Windows OS and Google Cloud Platform.
      --zone="$ZONE"
 
    echo "Instance group '$INSTANCE_GROUP_NAME' created successfully."
-<p align="center"> <img src="images/instance_group.png" alt="Instance Group"> </p>
+<p align="center"> <img src="images/instance_group.jpg" alt="Instance Group"> </p>
 
 9. **Create a Load Balancer for the Instance Group**
    - Navigate to **Load Balancing** under **Network Services** in the Google Cloud Console.
