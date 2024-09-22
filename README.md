@@ -273,3 +273,12 @@ Replication steps are provided for Windows OS and Google Cloud Platform.
     - If you wish to have a custom domain, you can register a domain name through [Google Domains](https://domains.google).
     - Once you have your domain, update the DNS settings by adding an A record that points to the IP address of your load balancer.
     - This step is optional; you can access your application directly using the load balancer's IP address if preferred.
+   
+---
+
+### Demonstration
+
+- CPU Utilization less than 50%.
+  <p align="center"> <img src="images/lb.jpg" alt="Instance_group_less_50"> </p>
+  <p align="center"> <img src="images/lb.jpg" alt="Instance_group_monitor_less_50"> </p>
+  <p align="center"> <img src="images/lb.jpg" alt="Website_less_50"> </p>
